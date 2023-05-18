@@ -430,58 +430,61 @@ class _TopDoctorPageState extends State<TopDoctor> {
                   padding: EdgeInsets.symmetric(
                       horizontal: context.height * 0.03,
                       vertical: context.height * 0.02),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const CircleAvatar(
-                        backgroundColor: Color.fromARGB(255, 201, 201, 201),
-                        radius: 30,
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text(
-                            'Dr. Ether',
-                            style: TextStyle(
-                              fontFamily: 'Pop',
-                              color: Colors.black,
-                              fontWeight: FontWeight.w500,
-                              fontSize: 16,
-                            ),
-                          ),
-                          Row(
-                            children: [
-                              SvgPicture.asset("assets/star.svg"),
-                              SizedBox(
-                                width: context.width * 0.02,
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const CircleAvatar(
+                          backgroundColor: Color.fromARGB(255, 201, 201, 201),
+                          radius: 30,
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              'Dr. Ether',
+                              style: TextStyle(
+                                fontFamily: 'Pop',
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 16,
                               ),
-                              const Text(
-                                '4.7 (4856 reviews)',
-                                style: TextStyle(
-                                  fontFamily: 'Pop',
-                                  color: Color.fromRGBO(0, 0, 0, 0.71),
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 10,
+                            ),
+                            Row(
+                              children: [
+                                SvgPicture.asset("assets/star.svg"),
+                                SizedBox(
+                                  width: context.width * 0.02,
                                 ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: context.height * 0.005,
-                          ),
-                          const Text(
-                            'Pediatricians - Ramsay Collage \n Hospital',
-                            style: TextStyle(
-                              fontFamily: 'Pop',
-                              color: Color.fromRGBO(0, 0, 0, 0.71),
-                              fontWeight: FontWeight.w400,
-                              fontSize: 12,
+                                const Text(
+                                  '4.7 (4856 reviews)',
+                                  style: TextStyle(
+                                    fontFamily: 'Pop',
+                                    color: Color.fromRGBO(0, 0, 0, 0.71),
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 10,
+                                  ),
+                                ),
+                              ],
                             ),
-                          )
-                        ],
-                      ),
-                      SvgPicture.asset("assets/like.svg"),
-                    ],
+                            SizedBox(
+                              height: context.height * 0.005,
+                            ),
+                            const Text(
+                              'Pediatricians - Ramsay Collage \n Hospital',
+                              style: TextStyle(
+                                fontFamily: 'Pop',
+                                color: Color.fromRGBO(0, 0, 0, 0.71),
+                                fontWeight: FontWeight.w400,
+                                fontSize: 12,
+                              ),
+                            )
+                          ],
+                        ),
+                        SvgPicture.asset("assets/like.svg"),
+                      ],
+                    ),
                   ),
                 ),
               ),
