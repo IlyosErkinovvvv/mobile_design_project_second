@@ -14,7 +14,7 @@ class SignUpPage extends StatefulWidget {
 }
 
 class _SignUpPageState extends State<SignUpPage> {
-  final _formField = GlobalKey<FormState>();
+  // final _formField = GlobalKey<FormState>();
   bool passToggle = true;
 
   @override
@@ -34,11 +34,11 @@ class _SignUpPageState extends State<SignUpPage> {
                     SizedBox(
                       height: context.height * 0.25,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: double.infinity,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
+                        children: [
                           Text(
                             "Sign up for free",
                             style: TextStyle(
@@ -73,6 +73,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           } else if (!emailValid) {
                             return "Enter valid email";
                           }
+                          return null;
                         },
                         decoration: InputDecoration(
                           labelText: "Phone number or login",
@@ -113,6 +114,7 @@ class _SignUpPageState extends State<SignUpPage> {
                               6) {
                             return "Password length should be more than 6 characters";
                           }
+                          return null;
                         },
                         decoration: InputDecoration(
                           labelText: "Password",
